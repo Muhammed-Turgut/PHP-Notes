@@ -144,10 +144,200 @@ echo $son = end($kume)."<br>"; //indeks numarasını sona götürür.*/
 //arry_chunk diziyi istediğim sayıdaki alt dizilere bölmemizi sağlar.
 //***************************************************************************
 
-$elemanlar = array("araba","bisiklet","kamon","ucak","yat","motor");
+/*$elemanlar = array("araba","bisiklet","kamon","ucak","yat","motor");
 
 echo "<pre>"; //diziyi daha düzenli hale getiren html kodu.
 print_r(array_chunk($elemanlar,2)); //diziyi 2 eleamnlı yeni dizilere ayrıdı.
-print_r(array_chunk($elemanlar,2,true)); // diziyi  2 elamanlı dizilere bölücek  ve indizleri koruyacak.
+print_r(array_chunk($elemanlar,2,true)); // diziyi  2 elamanlı dizilere bölücek  ve indizleri koruyacak. ön tanımlı olarak false oalrak gelir.
+*/
+
+
+//***************************************************************************
+//array_combine
+//***************************************************************************
+//amaç dizi elemanlarını kombine etmek  1.dizinin ilk elemanı 2.dizinin ilk elemanı ile eşleştiriliyor
+/* 
+$elemanlar = array("araba","bisiklet","kamon");
+$elemanlar1 = array("audi","olcaysan","volvo");
+
+$olusanDizi = array_combine($elemanlar,$elemanlar1);
+
+echo "<pre>";
+print_r($olusanDizi);*/
+
+
+//***************************************************************************
+//array_filip birdizdeki anahtarla değerleri değiştiriri.
+//***************************************************************************
+
+//$elemanlar = array("nesne" => "fırça", "malzeme" => "Kum", "arac" => "kamyon");
+//değer anahtar verilmese indis değerleri yazılır.
+/*
+echo "<pre>";
+print_r($elemanlar);
+
+echo "<br>";
+
+
+echo "<pre>";
+print_r(array_flip($elemanlar));*/
+
+
+
+//***************************************************************************
+//array_key_exist Belitilen anahta veya indisin dizide var olup olmadığını kontrol ederr.
+//***************************************************************************
+
+/*$elemanlar = array("nesne" => "fırça", "malzeme" => "Kum", "arac" => "kamyon");
+
+if(array_key_exists("malzeme",$elemanlar)):
+    echo "Malezeme anahtarı var.";
+else:
+    echo "Aradığınız değer yok";
+
+endif;
+*/
+
+//***************************************************************************
+// array_map istenilen fonksiyona istenilen dizinin değerleri parametre olarak veriliyor.
+//***************************************************************************
+
+/*function islem($sayi){
+    return ($sayi*$sayi*$sayi);
+}
+
+$elemanlar = array(1,2,3,4,5);
+echo "<pre>";
+print_r(array_map("islem",$elemanlar));
+//ekrana her indisin fonksiyondaki şleminin sonucunu yazdırdı
+echo "</pre>";*/
+
+//***************************************************************************
+//array_merge belirtilen dizileri art arda ekleyerek yeni di oluşturur.
+//***************************************************************************
+
+/*$elemanlar1 = array("model"=> "T120",8,9);
+$elemanlar2 = array("zeytin","peynir","model" => "z890", "marka" => "salman",35);
+
+echo "<pre>";
+print_r(array_merge($elemanlar1,$elemanlar2)); //bir veya birden fazla dizi alabilir.
+//aynı anahtar değernie sahip elemanlar varsa son değeri alır.
+*/
+
+//***************************************************************************
+//array_pop dizinin sonundaki elemanını diziden çıkarırı.
+//***************************************************************************
+
+/*$elemanlar = array(1,2,3,4,5);
+
+echo "<pre>";
+print_r(array_pop($elemanlar)); //burda çıkarılan dizi elamnı yazdırılır.
+
+echo "<pre>";
+print_r($elemanlar); //burda ise orjinal dizinin son halini veri*/
+
+//***************************************************************************
+//array_shift bu fonksiyon dizinin ilk elemanını çıkarırı
+//***************************************************************************
+
+/*$elemanlar = array(1,2,3,4,5);
+echo array_shift($elemanlar);
+
+echo "<pre>"; 
+print_r($elemanlar); //1 inci eleman dizi den çıkarıldı.*/
+
+//***************************************************************************
+//array_unshift dizinin başına bir veya birden fazla değer eklemeye yarar.
+//***************************************************************************
+
+/*$elemanlar = array(4,5,6,7,8);
+array_unshift($elemanlar,1,2,3);
+echo "<pre>";
+print_r($elemanlar);*/
+
+//***************************************************************************
+//array_product dizideki elemanların çarpımını bulur
+//***************************************************************************
+
+/*$elemanlar = array(4,5,6,7,8);
+$elemanlar2 = array(4,5,6,7,"değer");
+
+echo "işlem sonucu:".array_product($elemanlar);
+echo "işlem sonucu:".array_product($elemanlar2); //sonuc sıfır gelecek*/
+
+//***************************************************************************
+//array_unique dizide tekrara eden değerleri siler
+//***************************************************************************
+/*
+$elemanlar = array ("renk" => "yesil", "mavi","digerRenk","marka"=> "sarı","yesil","kırmızı");
+echo "<pre>";
+print_r(array_unique($elemanlar));*/
+
+//***************************************************************************
+//array_replace indizs değerlerini değiştiriri.
+//***************************************************************************
+
+/*$anadizim = array("audi","bmw","alfa","jeep");
+$degisecek = array(0=>"renualt", 4 =>"volvo");
+$degisecek2 = array(0=>"opel");
+
+$sonuc = array_replace($anadizim,$degisecek); //ilk parametredki indis deüerini ikinci dizideki aynı indis değeri ile değişir.
+echo "<pre>";
+print_r($sonuc);*/
+
+
+//***************************************************************************
+//array_search dizide elema aramya yara deerği bulduğunda anahtarı döner.
+//***************************************************************************
+
+/*$array = array(0=>"takı", 1 => "toka", 2=>"tarak", 3=>"ayna");
+$sonuc = array_search("ayna",$array);
+
+echo $sonuc; //cevap oalra 3 değerini dönecek.*/
+
+
+//***************************************************************************
+//array_keys istenen değere sayip tüm anhatarları döndürür.
+//***************************************************************************
+/*$array = array(0=>"takı", 1 => "toka", 2=>"tarak", 3=>"ayna",4=>"ayna",5=>"ayna");
+
+$sonuc = array_keys($array,"ayna");
+
+echo "<pre>";
+print_r($sonuc);*/
+
+//***************************************************************************
+//array_slice bir dizide istediğimiz kısımları almamızı sağlar.
+//***************************************************************************
+
+/*$array = array("takı","toka","ayna","ayna");
+echo "<pre>";
+print_r(array_slice($array,1,2));
+echo "</pre>";*/
+
+//***************************************************************************
+//compact değişkenlerin dizi haline dönüşmesini sağlar.
+//***************************************************************************
+
+/*$araba = "BMW";
+$kasaTipi = "Sedan";
+$rengi = "Kırmızı";
+
+$dizim = array();
+
+/*array_push($dizim,$araba);
+array_push($dizim,$kasaTipi);
+array_push($dizim,$dizim);
+
+echo "<pre>";
+$dizim = compact("araba","kasaTipi","rengi");
+
+print_r($dizim);*/
+
+//***************************************************************************
+//extract dizideki değerlieri değişke gibi kullanmaya yarar
+//***************************************************************************
+
+
 
 ?>

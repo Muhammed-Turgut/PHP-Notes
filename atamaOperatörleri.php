@@ -18,15 +18,15 @@ echo $a;
 %= kalana eşitle
 */
 
-$isimsoyisim = "Hüseyin";
-$soyad = "Ahmet";
+//$isimsoyisim = "Hüseyin";
+//$soyad = "Ahmet";
 
-echo $isimsoyisim .= $soyad; //Buda sitringleri birleşitmreye yarar.
+//echo $isimsoyisim .= $soyad; //Buda sitringleri birleşitmreye yarar.
 
 
 //************** Artırma azlatma operatörleri **************
 
-$a= 8;
+/*$a= 8;
 
 $a--; 
 echo $a;
@@ -51,7 +51,7 @@ $date = date('d.m.Y H:i:s')."<br>";
 
 echo $date; //zaman bilgisini Aldık
 
-
+*/
 
 
 

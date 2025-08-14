@@ -30,26 +30,18 @@ $b = 10;
 /*
 
 and -> ve
-
-or -> veya
-
-xor
-
 &&
 
+or -> veya
 ||
 
+xor // içinden sadece bir tane doğru ise doğru olur true değer döner
+
+1 xor 1 -> 0
+1 xor 0 -> 1
+0 xor 0 -> 0
+0 xor 1 -> 1
+
 */
-
-$t = 5;
-$k = 9;
-$c = 10;
-
-if($t < $k and $c > $t):
-
-    echo " doğru";
-else:
-
-endif;
 
 ?>
