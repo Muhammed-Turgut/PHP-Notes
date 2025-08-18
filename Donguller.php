@@ -52,8 +52,9 @@ endfor;*/
 // Go to aynı sayfa içerisinde atlamayı sağlar örneğin döngünün dışına atlar hengi bir yere gider.
 //******************************************************** */
 
-goto atla;
+/*goto atla;
 echo "selam";
+//Go to verimli bir kod.
 
 atla:
 
@@ -69,5 +70,5 @@ endfor;
 
 yallah:
 
-echo "uçtum geldim";
+echo "uçtum geldim";*/
 ?>
